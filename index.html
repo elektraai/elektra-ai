@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050a08"><meta name="description" content="ELECTRA AI — asisten diagnostik perangkat elektronik">
+<link rel="manifest" href="manifest.webmanifest">
+<title>ELECTRA AI</title>
+<style>
+:root{color-scheme:dark;--bg:#050907;--panel:#0b1510;--line:#173d29;--neon:#39ff88;--muted:#91a99a;--warn:#ffca65}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#123522 0,transparent 48%),var(--bg);color:#e8fff0;font:15px system-ui,-apple-system,sans-serif;min-height:100vh}header{padding:22px 18px 16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-weight:900;letter-spacing:3px;color:var(--neon);font-size:20px}.sub{font-size:11px;color:var(--muted);letter-spacing:1.5px;margin-top:3px}.status{border:1px solid #245a3b;border-radius:20px;padding:6px 10px;color:var(--neon);font-size:11px}main{max-width:850px;margin:auto;padding:18px}.hero{padding:22px 0 16px}.eyebrow{color:var(--neon);font-size:11px;letter-spacing:2px}.hero h1{font-size:28px;line-height:1.1;margin:8px 0}.hero p{color:var(--muted);line-height:1.55;margin:8px 0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.panel{background:linear-gradient(145deg,#0d1b13,#08100c);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:13px;box-shadow:0 8px 28px #0005}.panel h2{font-size:15px;margin:0 0 12px}.field{display:flex;flex-direction:column;gap:7px;margin:10px 0}.field label{color:var(--muted);font-size:12px}input,select,textarea{width:100%;background:#050c08;border:1px solid #24553a;border-radius:9px;color:#e8fff0;padding:12px;font:inherit;outline:none}button{background:var(--neon);color:#031109;border:0;border-radius:9px;padding:12px 15px;font-weight:800;font-size:13px;cursor:pointer}button.secondary{background:#102419;color:var(--neon);border:1px solid #28613e}button:active{transform:scale(.99)}.actions{display:flex;gap:9px;flex-wrap:wrap}.tile{border:1px solid var(--line);border-radius:12px;padding:14px;background:#08120c}.tile b{display:block;color:var(--neon);font-size:13px;margin:7px 0 4px}.tile span{color:var(--muted);font-size:12px;line-height:1.4}.icon{font-size:20px}.check{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #153322}.check:last-child{border:0}.check input{width:18px;height:18px;accent-color:var(--neon);margin-top:2px}.check label{font-size:13px;line-height:1.4}.result{white-space:pre-wrap;line-height:1.55;color:#c8f6d6;font-size:13px}.muted{color:var(--muted);font-size:12px;line-height:1.5}.nav{display:flex;gap:8px;overflow:auto;margin:12px 0 18px}.nav button{white-space:nowrap}.nav button.active{background:var(--neon)}.hidden{display:none!important}footer{text-align:center;color:#557362;font-size:11px;padding:25px 12px}.tag{display:inline-block;border:1px solid #27573b;color:var(--neon);border-radius:20px;padding:4px 8px;font-size:10px;margin:3px 3px 3px 0}@media(max-width:520px){.grid{grid-template-columns:1fr}.hero h1{font-size:25px}}
+</style></head>
+<body>
+<header><div><div class="brand">ELECTRA AI</div><div class="sub">ELECTRONIC DIAGNOSTIC ASSISTANT</div></div><div class="status">● SYSTEM READY</div></header>
+<main>
+<section class="hero"><div class="eyebrow">FIELD DIAGNOSTIC INTERFACE / V 0.1</div><h1>Diagnostik cerdas.<br><span style="color:var(--neon)">Perbaikan terarah.</span></h1><p>Asisten pemeriksaan awal untuk smartphone Android, iPhone, dan Smart TV. ELECTRA membantu menganalisis gejala dan menyusun langkah perbaikan yang aman.</p><span class="tag">CYBER UI</span><span class="tag">SEMI-AUTOMATIC</span><span class="tag">SAFE MODE</span></section>
+<div class="nav"><button class="active" data-tab="dashboard">Dashboard</button><button class="secondary" data-tab="diagnostic">Diagnostik</button><button class="secondary" data-tab="guide">Panduan</button><button class="secondary" data-tab="about">Batas Sistem</button></div>
+<section id="dashboard">
+<div class="grid">
+<div class="tile"><div class="icon">▣</div><b>SMARTPHONE</b><span>Android & iPhone · pemeriksaan gejala, baterai, jaringan, layar, dan sistem.</span></div>
+<div class="tile"><div class="icon">▤</div><b>SMART TV</b><span>Android TV / Google TV · koneksi, aplikasi, suara, gambar, dan restart.</span></div>
+<div class="tile"><div class="icon">⌁</div><b>AI ANALYSIS</b><span>Susun dugaan penyebab dari gejala yang Anda masukkan.</span></div>
+<div class="tile"><div class="icon">✓</div><b>SAFE ACTION</b><span>Setiap tindakan berisiko harus ditinjau dan disetujui pemilik perangkat.</span></div>
+</div>
+<div class="panel" style="margin-top:13px"><h2>Mulai pemeriksaan</h2><p class="muted">Pilih Diagnostik untuk memasukkan jenis perangkat, model, dan gejalanya. Hasil saat ini berupa analisis panduan lokal, belum menjalankan perintah ke perangkat.</p><button onclick="showTab('diagnostic')">BUKA DIAGNOSTIK →</button></div>
+</section>
+<section id="diagnostic" class="hidden">
+<div class="panel"><h2>01 / Identifikasi perangkat</h2>
+<div class="field"><label>Jenis perangkat</label><select id="kind"><option value="Android">Smartphone Android</option><option value="iPhone">iPhone</option><option value="Smart TV">Smart TV / Google TV</option></select></div>
+<div class="field"><label>Merek dan model</label><input id="model" placeholder="Contoh: Samsung Galaxy S25 Edge"></div>
+<div class="field"><label>Gejala utama</label><select id="symptom"><option value="lambat">Perangkat lambat / sering macet</option><option value="panas">Cepat panas</option><option value="baterai">Baterai cepat habis / tidak mengisi</option><option value="jaringan">Wi-Fi / jaringan bermasalah</option><option value="layar">Layar / sentuhan bermasalah</option><option value="boot">Tidak bisa menyala / bootloop</option><option value="audio">Suara / gambar TV bermasalah</option><option value="app">Aplikasi sering keluar sendiri</option><option value="lain">Gejala lain</option></select></div>
+<div class="field"><label>Detail tambahan</label><textarea id="detail" rows="3" placeholder="Kapan masalah terjadi? Apa yang sudah dicoba?"></textarea></div>
+<div class="actions"><button id="analyze">ANALISIS GEJALA</button><button class="secondary" id="reset">RESET</button></div></div>
+<div id="analysis" class="panel hidden"><h2>02 / Hasil analisis awal</h2><div id="result" class="result"></div><p class="muted">Ini adalah panduan awal berbasis gejala, bukan hasil pembacaan sensor perangkat. Jangan lakukan reset pabrik atau flashing sebelum data dicadangkan.</p></div>
+</section>
+<section id="guide" class="hidden"><div class="panel"><h2>Checklist pemeriksaan aman</h2>
+<div class="check"><input type="checkbox" id="c1"><label for="c1">Catat model perangkat dan versi sistem operasi.</label></div>
+<div class="check"><input type="checkbox" id="c2"><label for="c2">Periksa kerusakan fisik, cairan, kabel, adaptor, dan port.</label></div>
+<div class="check"><input type="checkbox" id="c3"><label for="c3">Catat kapan gejala muncul dan apakah terjadi berulang.</label></div>
+<div class="check"><input type="checkbox" id="c4"><label for="c4">Cadangkan data penting sebelum tindakan sistem.</label></div>
+<div class="check"><input type="checkbox" id="c5"><label for="c5">Minta persetujuan pemilik sebelum tindakan yang mengubah data/perangkat.</label></div>
+</div></section>
+<section id="about" class="hidden"><div class="panel"><h2>Batas kemampuan versi awal</h2><p class="muted">Versi ini adalah prototipe antarmuka PWA. Browser iPad tidak dapat melakukan ADB, fastboot, membaca sensor internal perangkat lain, membuka bootloader, atau mem-flash firmware secara langsung.</p><p class="muted">Koneksi diagnostik Android/TV melalui ADB, integrasi AI berbasis server, riwayat pemeriksaan, dan modul perangkat keras akan dibangun bertahap. iPhone memiliki pembatasan sistem yang lebih ketat.</p><p class="muted">ELECTRA tidak ditujukan untuk melewati Activation Lock, FRP, kata sandi, atau perlindungan anti-pencurian, dan tidak mengubah IMEI.</p></div></section>
+</main><footer>ELECTRA AI · PROTOTYPE 0.1 · DIAGNOSTICS ONLY</footer>
+<script>
+function showTab(id){document.querySelectorAll('main>section[id]').forEach(s=>s.classList.toggle('hidden',s.id!==id));document.querySelectorAll('.nav button').forEach(b=>{const a=b.dataset.tab===id;b.classList.toggle('active',a);b.classList.toggle('secondary',!a)});window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.tab)));
+const advice={
+lambat:['Penyimpanan hampir penuh atau aplikasi latar belakang','Periksa ruang kosong, tutup aplikasi yang tidak dipakai, lalu restart normal. Hindari aplikasi “cleaner” yang tidak tepercaya.'],
+panas:['Beban prosesor tinggi, sinyal lemah, pengisian, atau kondisi baterai','Hentikan game/aplikasi berat, lepaskan casing sementara, jauhkan dari matahari. Jika sangat panas, menggembung, atau berbau, hentikan pemakaian dan pengisian.'],
+baterai:['Kesehatan baterai menurun, adaptor/kabel, atau aplikasi boros','Uji dengan kabel dan adaptor yang sesuai dan tepercaya. Periksa statistik penggunaan baterai. Jika baterai menggembung, jangan ditekan atau ditusuk.'],
+jaringan:['Router, sinyal, DNS, atau konfigurasi jaringan','Aktifkan lalu nonaktifkan mode pesawat, restart router, uji jaringan lain. Jangan bagikan kata sandi Wi-Fi.'],
+layar:['Pelindung layar, kelembapan, benturan, atau kerusakan panel','Bersihkan dan keringkan layar, lepaskan pelindung bila mengganggu. Jika ada garis/bercak setelah benturan, perlu pemeriksaan fisik.'],
+boot:['Gangguan sistem, daya, baterai, atau penyimpanan','Pastikan sumber daya aman dan lakukan pengisian dengan adaptor yang sesuai. Jangan langsung flash firmware atau reset sebelum identifikasi model dan pencadangan.'],
+audio:['Pengaturan output, kabel/HDMI, aplikasi, atau perangkat audio','Periksa mute/volume, input TV, kabel HDMI, output audio, dan uji aplikasi/sumber lain.'],
+app:['Bug aplikasi, cache, izin, atau versi OS','Perbarui aplikasi dari toko resmi, restart perangkat, periksa ruang kosong dan izin aplikasi.'],
+lain:['Belum cukup data untuk menentukan penyebab','Catat pesan error, waktu kejadian, perubahan terakhir, dan langkah yang sudah dicoba.']
+};
+document.getElementById('analyze').addEventListener('click',()=>{const kind=document.getElementById('kind').value,model=document.getElementById('model').value.trim()||'Belum diisi',sym=document.getElementById('symptom').value,detail=document.getElementById('detail').value.trim(),a=advice[sym];document.getElementById('result').textContent='PERANGKAT: '+kind+'\nMODEL: '+model+'\n\nDUGAAN AWAL\n'+a[0]+'\n\nLANGKAH AMAN\n'+a[1]+'\n\nDETAIL PENGGUNA\n'+(detail||'Tidak ada detail tambahan')+'\n\nSTATUS: Analisis awal — perlu verifikasi teknisi.';document.getElementById('analysis').classList.remove('hidden')});
+document.getElementById('reset').addEventListener('click',()=>{document.getElementById('model').value='';document.getElementById('detail').value='';document.getElementById('analysis').classList.add('hidden')});
+if('serviceWorker' in navigator && location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
+</script></body></html>
